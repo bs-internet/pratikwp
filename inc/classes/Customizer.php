@@ -51,9 +51,6 @@ class PratikWp_Customizer {
         
         // Footer Settings
         $this->add_footer_section($wp_customize);
-        
-        // Performance Settings
-        $this->add_performance_section($wp_customize);
     }
 
     /**
@@ -442,71 +439,6 @@ class PratikWp_Customizer {
             'label' => __('Telif Hakkı Metni', 'pratikwp'),
             'section' => 'pratikwp_footer',
             'type' => 'text',
-        ]);
-    }
-
-    /**
-     * Performance settings section
-     */
-    private function add_performance_section($wp_customize) {
-        $wp_customize->add_section('pratikwp_performance', [
-            'title' => __('Performans', 'pratikwp'),
-            'panel' => 'pratikwp_theme',
-            'priority' => 70,
-        ]);
-        
-        // Enable lazy loading
-        $wp_customize->add_setting('enable_lazy_loading', [
-            'default' => true,
-            'sanitize_callback' => 'rest_sanitize_boolean',
-            'transport' => 'refresh',
-        ]);
-        
-        $wp_customize->add_control('enable_lazy_loading', [
-            'label' => __('Lazy Loading', 'pratikwp'),
-            'description' => __('Görselleri gecikmeli yükle', 'pratikwp'),
-            'section' => 'pratikwp_performance',
-            'type' => 'checkbox',
-        ]);
-        
-        // Enable preloading
-        $wp_customize->add_setting('enable_preloading', [
-            'default' => true,
-            'sanitize_callback' => 'rest_sanitize_boolean',
-            'transport' => 'refresh',
-        ]);
-        
-        $wp_customize->add_control('enable_preloading', [
-            'label' => __('Kritik Kaynakları Ön Yükle', 'pratikwp'),
-            'section' => 'pratikwp_performance',
-            'type' => 'checkbox',
-        ]);
-        
-        // Enable smooth scroll
-        $wp_customize->add_setting('enable_smooth_scroll', [
-            'default' => true,
-            'sanitize_callback' => 'rest_sanitize_boolean',
-            'transport' => 'refresh',
-        ]);
-        
-        $wp_customize->add_control('enable_smooth_scroll', [
-            'label' => __('Yumuşak Kaydırma', 'pratikwp'),
-            'section' => 'pratikwp_performance',
-            'type' => 'checkbox',
-        ]);
-        
-        // Enable Open Graph tags
-        $wp_customize->add_setting('enable_og_tags', [
-            'default' => true,
-            'sanitize_callback' => 'rest_sanitize_boolean',
-            'transport' => 'refresh',
-        ]);
-        
-        $wp_customize->add_control('enable_og_tags', [
-            'label' => __('Open Graph Etiketleri', 'pratikwp'),
-            'description' => __('Sosyal medya paylaşımları için meta etiketleri', 'pratikwp'),
-            'section' => 'pratikwp_performance',
-            'type' => 'checkbox',
         ]);
     }
 
