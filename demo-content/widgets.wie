@@ -1,0 +1,345 @@
+{
+  "version": "1.0.0",
+  "site_url": "https://demo.pratikwp.com",
+  "date": "2024-01-01 12:00:00",
+  "widgets": {
+    "sidebar-1": [
+      {
+        "id": "text-1",
+        "widget": "text",
+        "title": "Hakkımızda",
+        "text": "<div class=\"widget-about\">\n<p><strong>PratikWP</strong> modern WordPress teması ile web sitenizi profesyonel bir seviyeye taşıyın.</p>\n<p>✨ Elementor uyumlu<br>\n🚀 Hızlı performans<br>\n📱 Responsive tasarım<br>\n🔍 SEO optimize edilmiş</p>\n<p><a href=\"/hakkimizda\" class=\"btn btn-primary btn-sm\">Daha Fazla Bilgi</a></p>\n</div>",
+        "filter": false
+      },
+      {
+        "id": "recent-posts-1",
+        "widget": "recent-posts",
+        "title": "Son Yazılar",
+        "number": 5,
+        "show_date": true
+      },
+      {
+        "id": "categories-1",
+        "widget": "categories",
+        "title": "Kategoriler",
+        "count": true,
+        "hierarchical": false,
+        "dropdown": false
+      },
+      {
+        "id": "tag_cloud-1",
+        "widget": "tag_cloud",
+        "title": "Popüler Etiketler",
+        "taxonomy": "post_tag",
+        "count": 20
+      }
+    ],
+    "footer-1": [
+      {
+        "id": "text-2",
+        "widget": "text",
+        "title": "PratikWP",
+        "text": "<div class=\"footer-brand\">\n<p>Modern WordPress teması ile web sitenizi bir üst seviyeye taşıyın. Profesyonel tasarım, hızlı performans ve kullanıcı dostu arayüz.</p>\n<div class=\"footer-contact mt-3\">\n<p><i class=\"fas fa-map-marker-alt me-2\"></i> Nilüfer, Bursa, Türkiye</p>\n<p><i class=\"fas fa-phone me-2\"></i> <a href=\"tel:+902241234567\">+90 (224) 123 45 67</a></p>\n<p><i class=\"fas fa-envelope me-2\"></i> <a href=\"mailto:info@pratikwp.com\">info@pratikwp.com</a></p>\n</div>\n</div>",
+        "filter": false
+      }
+    ],
+    "footer-2": [
+      {
+        "id": "nav_menu-1",
+        "widget": "nav_menu",
+        "title": "Hızlı Linkler",
+        "nav_menu": "Footer Menu"
+      },
+      {
+        "id": "text-3",
+        "widget": "text",
+        "title": "Hizmetlerimiz",
+        "text": "<ul class=\"footer-services list-unstyled\">\n<li><a href=\"/web-tasarim\"><i class=\"fas fa-chevron-right me-2\"></i>Web Tasarım</a></li>\n<li><a href=\"/wordpress-gelistirme\"><i class=\"fas fa-chevron-right me-2\"></i>WordPress Geliştirme</a></li>\n<li><a href=\"/seo-hizmetleri\"><i class=\"fas fa-chevron-right me-2\"></i>SEO Hizmetleri</a></li>\n<li><a href=\"/e-ticaret\"><i class=\"fas fa-chevron-right me-2\"></i>E-Ticaret Çözümleri</a></li>\n<li><a href=\"/hosting\"><i class=\"fas fa-chevron-right me-2\"></i>Hosting & Domain</a></li>\n<li><a href=\"/bakim\"><i class=\"fas fa-chevron-right me-2\"></i>Site Bakım</a></li>\n</ul>",
+        "filter": false
+      }
+    ],
+    "footer-3": [
+      {
+        "id": "recent-posts-2",
+        "widget": "recent-posts",
+        "title": "Blog Yazıları",
+        "number": 4,
+        "show_date": true
+      }
+    ],
+    "footer-4": [
+      {
+        "id": "text-4",
+        "widget": "text",
+        "title": "Newsletter",
+        "text": "<div class=\"newsletter-widget\">\n<p>Güncel haberler, ipuçları ve özel tekliflerden haberdar olun.</p>\n<form class=\"newsletter-form\" method=\"post\" action=\"#\">\n<div class=\"input-group mb-3\">\n<input type=\"email\" class=\"form-control\" placeholder=\"E-posta adresiniz\" required>\n<button class=\"btn btn-primary\" type=\"submit\">\n<i class=\"fas fa-paper-plane\"></i>\n</button>\n</div>\n</form>\n<small class=\"text-muted\">Gizliliğinize saygı duyuyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.</small>\n</div>",
+        "filter": false
+      },
+      {
+        "id": "text-5",
+        "widget": "text",
+        "title": "Sertifikalarımız",
+        "text": "<div class=\"certificates\">\n<div class=\"row g-2\">\n<div class=\"col-6\">\n<img src=\"/wp-content/uploads/2024/01/ssl-certificate.png\" alt=\"SSL Sertifikası\" class=\"img-fluid\">\n</div>\n<div class=\"col-6\">\n<img src=\"/wp-content/uploads/2024/01/google-partner.png\" alt=\"Google Partner\" class=\"img-fluid\">\n</div>\n<div class=\"col-6\">\n<img src=\"/wp-content/uploads/2024/01/wordpress-expert.png\" alt=\"WordPress Expert\" class=\"img-fluid\">\n</div>\n<div class=\"col-6\">\n<img src=\"/wp-content/uploads/2024/01/iso-certificate.png\" alt=\"ISO Sertifikası\" class=\"img-fluid\">\n</div>\n</div>\n</div>",
+        "filter": false
+      }
+    ],
+    "shop-sidebar": [
+      {
+        "id": "woocommerce_product_categories-1",
+        "widget": "woocommerce_product_categories",
+        "title": "Ürün Kategorileri",
+        "count": true,
+        "hierarchical": true,
+        "show_children_only": false,
+        "hide_empty": true
+      },
+      {
+        "id": "woocommerce_price_filter-1",
+        "widget": "woocommerce_price_filter",
+        "title": "Fiyata Göre Filtrele"
+      },
+      {
+        "id": "woocommerce_layered_nav-1",
+        "widget": "woocommerce_layered_nav",
+        "title": "Renk",
+        "attribute": "pa_color",
+        "display_type": "list",
+        "query_type": "and"
+      },
+      {
+        "id": "woocommerce_layered_nav-2",
+        "widget": "woocommerce_layered_nav",
+        "title": "Beden",
+        "attribute": "pa_size",
+        "display_type": "list",
+        "query_type": "and"
+      },
+      {
+        "id": "woocommerce_top_rated_products-1",
+        "widget": "woocommerce_top_rated_products",
+        "title": "En Çok Beğenilen Ürünler",
+        "number": 5
+      }
+    ],
+    "header-1": [
+      {
+        "id": "text-6",
+        "widget": "text",
+        "title": "",
+        "text": "<div class=\"header-cta text-end\">\n<p class=\"mb-1\"><i class=\"fas fa-phone me-2 text-primary\"></i><strong>+90 (224) 123 45 67</strong></p>\n<p class=\"mb-0 small text-muted\">7/24 Destek Hattı</p>\n</div>",
+        "filter": false
+      }
+    ],
+    "offcanvas-1": [
+      {
+        "id": "text-7",
+        "widget": "text",
+        "title": "Mobil Menü",
+        "text": "<div class=\"mobile-welcome\">\n<p><strong>PratikWP'ye hoş geldiniz!</strong></p>\n<p class=\"small text-muted\">Modern WordPress temanız için her şey burada.</p>\n</div>",
+        "filter": false
+      }
+    ]
+  },
+  "widget_areas": {
+    "sidebar-1": {
+      "name": "Blog Sidebar",
+      "description": "Blog sayfası ve yazılarında görünen sidebar alanı."
+    },
+    "footer-1": {
+      "name": "Footer 1. Sütun",
+      "description": "Footer alanının birinci sütunu."
+    },
+    "footer-2": {
+      "name": "Footer 2. Sütun", 
+      "description": "Footer alanının ikinci sütunu."
+    },
+    "footer-3": {
+      "name": "Footer 3. Sütun",
+      "description": "Footer alanının üçüncü sütunu."
+    },
+    "footer-4": {
+      "name": "Footer 4. Sütun",
+      "description": "Footer alanının dördüncü sütunu."
+    },
+    "shop-sidebar": {
+      "name": "Shop Sidebar",
+      "description": "WooCommerce mağaza sayfalarında görünen sidebar."
+    },
+    "header-1": {
+      "name": "Header Widget Area",
+      "description": "Header alanında görünen widget alanı."
+    },
+    "offcanvas-1": {
+      "name": "Offcanvas Widget Area",
+      "description": "Mobil menüde görünen widget alanı."
+    }
+  },
+  "custom_widgets": [
+    {
+      "id": "pratikwp_social_widget",
+      "name": "PratikWP Sosyal Medya",
+      "description": "Sosyal medya ikonlarını görüntüler.",
+      "settings": {
+        "title": "Bizi Takip Edin",
+        "facebook": "https://facebook.com/pratikwp",
+        "twitter": "https://twitter.com/pratikwp", 
+        "instagram": "https://instagram.com/pratikwp",
+        "linkedin": "https://linkedin.com/company/pratikwp",
+        "youtube": "https://youtube.com/c/pratikwp",
+        "style": "rounded",
+        "size": "medium",
+        "show_labels": false
+      }
+    },
+    {
+      "id": "pratikwp_contact_widget",
+      "name": "PratikWP İletişim",
+      "description": "İletişim bilgilerini görüntüler.",
+      "settings": {
+        "title": "İletişim",
+        "phone": "+90 (224) 123 45 67",
+        "email": "info@pratikwp.com",
+        "address": "Nilüfer, Bursa, Türkiye",
+        "working_hours": "Pzt-Cum 09:00-18:00",
+        "show_icons": true,
+        "show_map": false
+      }
+    },
+    {
+      "id": "pratikwp_recent_posts_widget",
+      "name": "PratikWP Son Yazılar",
+      "description": "Son blog yazılarını thumbnail ile görüntüler.",
+      "settings": {
+        "title": "Son Blog Yazıları",
+        "number": 5,
+        "show_date": true,
+        "show_thumbnail": true,
+        "show_excerpt": true,
+        "excerpt_length": 15,
+        "thumbnail_size": "thumbnail"
+      }
+    },
+    {
+      "id": "pratikwp_testimonial_widget", 
+      "name": "PratikWP Testimonial",
+      "description": "Müşteri yorumlarını görüntüler.",
+      "settings": {
+        "title": "Müşteri Yorumları",
+        "testimonials": [
+          {
+            "name": "Ahmet Yılmaz",
+            "company": "ABC Şirketi",
+            "text": "PratikWP teması sayesinde web sitemiz çok daha profesyonel görünüyor. Hızı ve tasarımı mükemmel!",
+            "rating": 5,
+            "avatar": "/wp-content/uploads/2024/01/testimonial-1.jpg"
+          },
+          {
+            "name": "Fatma Kaya",
+            "company": "XYZ Ltd.",
+            "text": "Elementor ile çok kolay düzenleniyor. Teknik bilgim olmadan güzel sayfalar oluşturabiliyorum.",
+            "rating": 5,
+            "avatar": "/wp-content/uploads/2024/01/testimonial-2.jpg"
+          }
+        ],
+        "autoplay": true,
+        "autoplay_speed": 5000,
+        "show_arrows": false,
+        "show_dots": true
+      }
+    }
+  ],
+  "menu_locations": {
+    "primary": "Ana Menü",
+    "footer": "Footer Menü",
+    "mobile": "Mobil Menü"
+  },
+  "menus": {
+    "primary": {
+      "name": "Ana Menü",
+      "items": [
+        {
+          "title": "Ana Sayfa",
+          "url": "/",
+          "type": "custom"
+        },
+        {
+          "title": "Hakkımızda",
+          "url": "/hakkimizda",
+          "type": "page"
+        },
+        {
+          "title": "Hizmetler",
+          "url": "#",
+          "type": "custom",
+          "children": [
+            {
+              "title": "Web Tasarım",
+              "url": "/web-tasarim",
+              "type": "page"
+            },
+            {
+              "title": "WordPress Geliştirme", 
+              "url": "/wordpress-gelistirme",
+              "type": "page"
+            },
+            {
+              "title": "SEO Hizmetleri",
+              "url": "/seo-hizmetleri", 
+              "type": "page"
+            },
+            {
+              "title": "E-Ticaret",
+              "url": "/e-ticaret",
+              "type": "page"
+            }
+          ]
+        },
+        {
+          "title": "Blog",
+          "url": "/blog",
+          "type": "page"
+        },
+        {
+          "title": "Portföy",
+          "url": "/portfolio",
+          "type": "page"
+        },
+        {
+          "title": "İletişim",
+          "url": "/iletisim",
+          "type": "page"
+        }
+      ]
+    },
+    "footer": {
+      "name": "Footer Menü",
+      "items": [
+        {
+          "title": "Gizlilik Politikası",
+          "url": "/gizlilik-politikasi",
+          "type": "page"
+        },
+        {
+          "title": "Kullanım Şartları",
+          "url": "/kullanim-sartlari",
+          "type": "page"
+        },
+        {
+          "title": "Çerez Politikası",
+          "url": "/cerez-politikasi",
+          "type": "page"
+        },
+        {
+          "title": "KVKK",
+          "url": "/kvkk",
+          "type": "page"
+        },
+        {
+          "title": "Sitemap",
+          "url": "/sitemap",
+          "type": "custom"
+        }
+      ]
+    }
+  }
+}

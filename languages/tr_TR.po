@@ -1,0 +1,799 @@
+# Turkish (Turkey) translation for PratikWP Theme
+# Copyright (C) 2024 PratikWP
+# This file is distributed under the same license as the PratikWP package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PratikWP 1.0.0\n"
+"Report-Msgid-Bugs-To: https://pratikwp.com/support\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: PratikWP Team <info@pratikwp.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: functions.php:25
+msgid "Primary Menu"
+msgstr "Ana Menü"
+
+#: functions.php:26
+msgid "Footer Menu"
+msgstr "Alt Menü"
+
+#: functions.php:27
+msgid "Mobile Menu"
+msgstr "Mobil Menü"
+
+#: functions.php:35
+msgid "Blog Sidebar"
+msgstr "Blog Kenar Çubuğu"
+
+#: functions.php:41
+msgid "Footer 1st Column"
+msgstr "Alt Kısım 1. Sütun"
+
+#: functions.php:47
+msgid "Footer 2nd Column"
+msgstr "Alt Kısım 2. Sütun"
+
+#: functions.php:53
+msgid "Footer 3rd Column"
+msgstr "Alt Kısım 3. Sütun"
+
+#: functions.php:59
+msgid "Footer 4th Column"
+msgstr "Alt Kısım 4. Sütun"
+
+#: functions.php:65
+msgid "Shop Sidebar"
+msgstr "Mağaza Kenar Çubuğu"
+
+#: inc/template-functions.php:45
+msgid "Continue reading"
+msgstr "Devamını oku"
+
+#: inc/template-functions.php:75
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: inc/template-functions.php:125
+msgid "Page %s"
+msgstr "Sayfa %s"
+
+#: inc/template-functions.php:145
+msgid "Previous"
+msgstr "Önceki"
+
+#: inc/template-functions.php:146
+msgid "Next"
+msgstr "Sonraki"
+
+#: inc/template-functions.php:180
+msgid "Search Results for: %s"
+msgstr "%s için Arama Sonuçları"
+
+#: inc/template-functions.php:183
+msgid "Page Not Found"
+msgstr "Sayfa Bulunamadı"
+
+#: inc/template-functions.php:262
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: inc/template-functions.php:295
+msgid "Category: %s"
+msgstr "Kategori: %s"
+
+#: inc/template-functions.php:301
+msgid "Tag: %s"
+msgstr "Etiket: %s"
+
+#: inc/template-functions.php:307
+msgid "Author: %s"
+msgstr "Yazar: %s"
+
+#: inc/template-functions.php:315
+msgid "Search: %s"
+msgstr "Arama: %s"
+
+#: inc/template-functions.php:321
+msgid "404 - Page Not Found"
+msgstr "404 - Sayfa Bulunamadı"
+
+#: template-parts/content.php:45
+msgid "Continue reading"
+msgstr "Devamını oku"
+
+#: template-parts/content.php:48
+msgctxt "Name of the post author"
+msgid "by %s"
+msgstr "%s tarafından"
+
+#: template-parts/content.php:65
+msgid "No Comments"
+msgstr "Yorum Yok"
+
+#: template-parts/content.php:67
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: template-parts/content.php:69
+msgid "% Comments"
+msgstr "% Yorum"
+
+#: template-parts/content.php:85
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] "%s dakika"
+msgstr[1] "%s dakika"
+
+#: template-parts/content.php:115
+msgid "Continue Reading"
+msgstr "Devamını Oku"
+
+#: template-parts/content-single.php:75
+msgid "Author:"
+msgstr "Yazar:"
+
+#: template-parts/content-single.php:83
+msgid "Date:"
+msgstr "Tarih:"
+
+#: template-parts/content-single.php:91
+msgid "Updated:"
+msgstr "Güncelleme:"
+
+#: template-parts/content-single.php:101
+msgid "Reading Time:"
+msgstr "Okuma Süresi:"
+
+#: template-parts/content-single.php:103
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] "%s dakika"
+msgstr[1] "%s dakika"
+
+#: template-parts/content-single.php:115
+msgid "No comments yet"
+msgstr "Henüz yorum yok"
+
+#: template-parts/content-single.php:117
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s yorum"
+msgstr[1] "%s yorum"
+
+#: template-parts/content-single.php:125
+msgid "%s views"
+msgstr "%s görüntüleme"
+
+#: template-parts/content-single.php:145
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: template-parts/content-single.php:155
+msgid "Tags:"
+msgstr "Etiketler:"
+
+#: template-parts/content-page.php:45
+msgid "Author:"
+msgstr "Yazar:"
+
+#: template-parts/content-page.php:51
+msgid "Published:"
+msgstr "Yayınlanma:"
+
+#: template-parts/content-page.php:58
+msgid "Updated:"
+msgstr "Güncelleme:"
+
+#: template-parts/content-page.php:75
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: template-parts/content-page.php:85
+msgid "Edit"
+msgstr "Düzenle"
+
+#: template-parts/content-search.php:75
+msgid "No results found for \"%s\""
+msgstr "\"%s\" için sonuç bulunamadı"
+
+#: template-parts/content-search.php:85
+msgid "Search suggestions:"
+msgstr "Arama önerileri:"
+
+#: template-parts/content-search.php:87
+msgid "Try more general keywords"
+msgstr "Daha genel kelimeler deneyin"
+
+#: template-parts/content-search.php:88
+msgid "Check your spelling"
+msgstr "Yazımı kontrol edin"
+
+#: template-parts/content-search.php:89
+msgid "Try synonyms"
+msgstr "Eş anlamlı kelimeler deneyin"
+
+#: template-parts/content-search.php:90
+msgid "Use fewer words"
+msgstr "Daha az kelime kullanın"
+
+#: template-parts/content-search.php:95
+msgid "Search again:"
+msgstr "Tekrar arayın:"
+
+#: template-parts/content-search.php:105
+msgid "Recent Posts:"
+msgstr "Son Yazılar:"
+
+#: template-parts/content-search.php:130
+msgid "No content in \"%s\" category"
+msgstr "\"%s\" kategorisinde içerik yok"
+
+#: template-parts/content-search.php:140
+msgid "This category doesn't have any published content yet."
+msgstr "Bu kategoride henüz yayınlanmış içerik bulunmuyor."
+
+#: template-parts/content-search.php:145
+msgid "Go to Homepage"
+msgstr "Ana Sayfaya Git"
+
+#: template-parts/content-search.php:148
+msgid "All Posts"
+msgstr "Tüm Yazılar"
+
+#: template-parts/content-search.php:160
+msgid "No content with \"%s\" tag"
+msgstr "\"%s\" etiketinde içerik yok"
+
+#: template-parts/content-search.php:170
+msgid "This tag doesn't have any published content yet."
+msgstr "Bu etikete sahip henüz yayınlanmış içerik bulunmuyor."
+
+#: template-parts/content-search.php:175
+msgid "Go to Homepage"
+msgstr "Ana Sayfaya Git"
+
+#: template-parts/content-none.php:35
+msgid "No Published Content Yet"
+msgstr "Henüz Yayınlanmış İçerik Yok"
+
+#: template-parts/content-none.php:45
+msgid "No published posts found yet. Ready to write your first post?"
+msgstr "Henüz yayınlanmış yazı bulunamadı. İlk yazınızı yazmaya hazır mısınız?"
+
+#: template-parts/content-none.php:50
+msgid "Write Your First Post"
+msgstr "İlk Yazınızı Yazın"
+
+#: template-parts/content-none.php:85
+msgid "Try different keywords"
+msgstr "Farklı kelimeler deneyin"
+
+#: template-parts/content-none.php:86
+msgid "Check spelling mistakes"
+msgstr "Yazım hatalarını kontrol edin"
+
+#: template-parts/content-none.php:87
+msgid "Try synonyms"
+msgstr "Eş anlamlı kelimeler deneyin"
+
+#: template-parts/content-none.php:88
+msgid "Use fewer words"
+msgstr "Daha az kelime kullanın"
+
+#: template-parts/content-none.php:93
+msgid "Search again:"
+msgstr "Tekrar arayın:"
+
+#: template-parts/content-none.php:105
+msgid "Recent Posts:"
+msgstr "Son Yazılar:"
+
+#: template-parts/content-none.php:140
+msgid "Content Not Found"
+msgstr "İçerik Bulunamadı"
+
+#: template-parts/content-none.php:150
+msgid "The page or content you're looking for could not be found. You can return to homepage or search."
+msgstr "Aradığınız sayfa veya içerik bulunamadı. Ana sayfaya dönebilir veya arama yapabilirsiniz."
+
+#: template-parts/content-none.php:158
+msgid "Go to Homepage"
+msgstr "Ana Sayfaya Git"
+
+#: template-parts/content-none.php:162
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/top-bar.php:50
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/top-bar.php:120
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/top-bar.php:123
+msgid "Close"
+msgstr "Kapat"
+
+#: template-parts/header/top-bar.php:128
+msgctxt "placeholder"
+msgid "Search..."
+msgstr "Arama..."
+
+#: template-parts/header/main-header.php:45
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/main-header.php:180
+msgid "Menu"
+msgstr "Menü"
+
+#: template-parts/header/main-header.php:285
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/main-header.php:365
+msgid "Menu"
+msgstr "Menü"
+
+#: template-parts/header/main-header.php:465
+msgid "Search"
+msgstr "Arama"
+
+#: template-parts/header/main-header.php:545
+msgid "Menu"
+msgstr "Menü"
+
+#: template-parts/header/main-header.php:555
+msgid "Site Search"
+msgstr "Site İçinde Arama"
+
+#: template-parts/header/main-header.php:558
+msgid "Close"
+msgstr "Kapat"
+
+#: template-parts/header/main-header.php:563
+msgctxt "placeholder"
+msgid "What are you looking for?"
+msgstr "Ne aramak istiyorsunuz?"
+
+#: template-parts/header/main-header.php:571
+msgid "Search"
+msgstr "Ara"
+
+#: template-parts/header/main-header.php:578
+msgid "Popular Searches:"
+msgstr "Popüler Aramalar:"
+
+#: template-parts/header/mobile-menu.php:45
+msgid "Close"
+msgstr "Kapat"
+
+#: template-parts/header/mobile-menu.php:55
+msgctxt "placeholder"
+msgid "Search..."
+msgstr "Arama..."
+
+#: template-parts/header/mobile-menu.php:75
+msgid "Contact"
+msgstr "İletişim"
+
+#: template-parts/header/mobile-menu.php:120
+msgid "Social Media"
+msgstr "Sosyal Medya"
+
+#: template-parts/header/mobile-menu.php:185
+msgid "My Account"
+msgstr "Hesabım"
+
+#: template-parts/header/mobile-menu.php:191
+msgid "Cart"
+msgstr "Sepet"
+
+#: template-parts/header/mobile-menu.php:205
+msgid "Language Options"
+msgstr "Dil Seçenekleri"
+
+#: template-parts/header/mobile-menu.php:270
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: template-parts/footer/copyright.php:35
+msgid "© %1$s %2$s. All rights reserved."
+msgstr "© %1$s %2$s. Tüm hakları saklıdır."
+
+#: template-parts/footer/copyright.php:50
+msgid "WordPress theme: %s"
+msgstr "WordPress teması: %s"
+
+#: template-parts/footer/copyright.php:135
+msgid "Secure"
+msgstr "Güvenli"
+
+#: template-parts/footer/copyright.php:135
+msgid "SSL Secure Connection"
+msgstr "SSL Güvenli Bağlantı"
+
+#: template-parts/footer/copyright.php:160
+msgid "Privacy Policy"
+msgstr "Gizlilik Politikası"
+
+#: template-parts/footer/copyright.php:168
+msgid "Terms of Use"
+msgstr "Kullanım Şartları"
+
+#: template-parts/footer/copyright.php:176
+msgid "Cookie Policy"
+msgstr "Çerez Politikası"
+
+#: template-parts/footer/social-links.php:45
+msgid "Facebook"
+msgstr "Facebook"
+
+#: template-parts/footer/social-links.php:50
+msgid "Twitter"
+msgstr "Twitter"
+
+#: template-parts/footer/social-links.php:55
+msgid "Instagram"
+msgstr "Instagram"
+
+#: template-parts/footer/social-links.php:60
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: template-parts/footer/social-links.php:65
+msgid "YouTube"
+msgstr "YouTube"
+
+#: template-parts/footer/social-links.php:70
+msgid "TikTok"
+msgstr "TikTok"
+
+#: template-parts/footer/social-links.php:75
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: template-parts/footer/social-links.php:80
+msgid "Telegram"
+msgstr "Telegram"
+
+#: template-parts/footer/social-links.php:85
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: template-parts/footer/social-links.php:90
+msgid "Discord"
+msgstr "Discord"
+
+#: template-parts/footer/social-links.php:95
+msgid "GitHub"
+msgstr "GitHub"
+
+#: template-parts/footer/social-links.php:100
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: template-parts/footer/social-links.php:275
+msgid "Subscribe to Newsletter"
+msgstr "Bültene Abone Ol"
+
+#: template-parts/footer/social-links.php:280
+msgid "Get updated with latest news and special offers."
+msgstr "Güncel haberler ve özel tekliflerden haberdar olun."
+
+#: template-parts/footer/social-links.php:295
+msgctxt "placeholder"
+msgid "Your email address"
+msgstr "E-posta adresiniz"
+
+#: template-parts/footer/social-links.php:298
+msgid "Subscribe"
+msgstr "Abone Ol"
+
+#: template-parts/page-title.php:75
+msgid "Search Results: \"%s\""
+msgstr "Arama Sonuçları: \"%s\""
+
+#: template-parts/page-title.php:78
+msgid "%s result found"
+msgid_plural "%s results found"
+msgstr[0] "%s sonuç bulundu"
+msgstr[1] "%s sonuç bulundu"
+
+#: template-parts/page-title.php:81
+msgid "Page Not Found"
+msgstr "Sayfa Bulunamadı"
+
+#: template-parts/page-title.php:82
+msgid "The page you're looking for doesn't exist or may have been moved."
+msgstr "Aradığınız sayfa mevcut değil veya taşınmış olabilir."
+
+#: template-parts/page-title.php:115
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: template-parts/page-title.php:130
+msgctxt "placeholder"
+msgid "Search again..."
+msgstr "Yeni arama yapın..."
+
+#: template-parts/page-title.php:145
+msgid "Go to Homepage"
+msgstr "Ana Sayfaya Dön"
+
+#: template-parts/page-title.php:149
+msgid "Search"
+msgstr "Arama Yap"
+
+#: template-parts/page-title.php:160
+msgid "Author:"
+msgstr "Yazar:"
+
+#: template-parts/page-title.php:166
+msgid "Published:"
+msgstr "Yayınlanma:"
+
+#: template-parts/page-title.php:172
+msgid "Comments:"
+msgstr "Yorumlar:"
+
+#: template-parts/page-title.php:175
+msgid "No Comments"
+msgstr "Yorum Yok"
+
+#: template-parts/page-title.php:177
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: template-parts/page-title.php:179
+msgid "% Comments"
+msgstr "% Yorum"
+
+#: template-parts/page-title.php:188
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] "%s dakika"
+msgstr[1] "%s dakika"
+
+#: template-parts/breadcrumbs.php:95
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: template-parts/breadcrumbs.php:155
+msgid "Tag: %s"
+msgstr "Etiket: %s"
+
+#: template-parts/breadcrumbs.php:162
+msgid "Author: %s"
+msgstr "Yazar: %s"
+
+#: template-parts/breadcrumbs.php:190
+msgid "Search: \"%s\""
+msgstr "Arama: \"%s\""
+
+#: template-parts/breadcrumbs.php:197
+msgid "404 - Page Not Found"
+msgstr "404 - Sayfa Bulunamadı"
+
+#: template-parts/breadcrumbs.php:208
+msgid "Blog"
+msgstr "Blog"
+
+#: template-parts/post/meta.php:95
+msgid "Date:"
+msgstr "Tarih:"
+
+#: template-parts/post/meta.php:105
+msgid "Category:"
+msgstr "Kategori:"
+
+#: template-parts/post/meta.php:120
+msgid "Reading:"
+msgstr "Okuma:"
+
+#: template-parts/post/meta.php:128
+msgid "%s min"
+msgid_plural "%s min"
+msgstr[0] "%s dk"
+msgstr[1] "%s dk"
+
+#: template-parts/post/meta.php:135
+msgid "Comments:"
+msgstr "Yorum:"
+
+#: template-parts/post/meta.php:138
+msgid "0"
+msgstr "0"
+
+#: template-parts/post/meta.php:140
+msgid "1"
+msgstr "1"
+
+#: template-parts/post/meta.php:142
+msgid "%"
+msgstr "%"
+
+#: template-parts/post/meta.php:185
+msgid "%s views"
+msgstr "%s görüntüleme"
+
+#: template-parts/post/meta.php:205
+msgid "Author"
+msgstr "Yazar"
+
+#: template-parts/post/meta.php:215
+msgid "Published"
+msgstr "Yayın Tarihi"
+
+#: template-parts/post/meta.php:235
+msgid "Category"
+msgstr "Kategori"
+
+#: template-parts/post/meta.php:250
+msgid "Comments"
+msgstr "Yorumlar"
+
+#: template-parts/post/meta.php:255
+msgid "No comments yet"
+msgstr "Henüz yorum yok"
+
+#: template-parts/post/meta.php:257
+msgid "1 comment"
+msgstr "1 yorum"
+
+#: template-parts/post/meta.php:259
+msgid "% comments"
+msgstr "% yorum"
+
+#: template-parts/post/meta.php:270
+msgid "Reading Time"
+msgstr "Okuma Süresi"
+
+#: template-parts/post/meta.php:278
+msgid "~%s minute"
+msgid_plural "~%s minutes"
+msgstr[0] "~%s dakika"
+msgstr[1] "~%s dakika"
+
+#: template-parts/post/meta.php:288
+msgid "Tags"
+msgstr "Etiketler"
+
+#: template-parts/post/meta.php:305
+msgid "Edit"
+msgstr "Düzenle"
+
+#: template-parts/post/navigation.php:45
+msgid "Post Navigation"
+msgstr "Yazı Navigasyonu"
+
+#: template-parts/post/navigation.php:55
+msgid "Previous Post"
+msgstr "Önceki Yazı"
+
+#: template-parts/post/navigation.php:95
+msgid "You're at the first post"
+msgstr "İlk yazıdasınız"
+
+#: template-parts/post/navigation.php:115
+msgid "Next Post"
+msgstr "Sonraki Yazı"
+
+#: template-parts/post/navigation.php:155
+msgid "You're at the last post"
+msgstr "Son yazıdasınız"
+
+#: template-parts/post/navigation.php:175
+msgid "Previous"
+msgstr "Önceki"
+
+#: template-parts/post/navigation.php:185
+msgid "All Posts"
+msgstr "Tüm Yazılar"
+
+#: template-parts/post/navigation.php:191
+msgid "Next"
+msgstr "Sonraki"
+
+#: template-parts/post/navigation.php:215
+msgid "Previous Post"
+msgstr "Önceki Yazı"
+
+#: template-parts/post/navigation.php:240
+msgid "Next Post"
+msgstr "Sonraki Yazı"
+
+#: template-parts/post/navigation.php:285
+msgid "This post is in %1$s category. There are total %2$s posts in this category."
+msgstr "Bu yazı %1$s kategorisinde bulunuyor. Bu kategoride toplam %2$s yazı var."
+
+#: template-parts/post/author-bio.php:75
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s yazı"
+msgstr[1] "%s yazı"
+
+#: template-parts/post/author-bio.php:85
+msgid "member since %s"
+msgstr "%s tarihinden beri"
+
+#: template-parts/post/author-bio.php:95
+msgid "All Posts"
+msgstr "Tüm Yazıları"
+
+#: template-parts/post/author-bio.php:102
+msgid "Website"
+msgstr "Website"
+
+#: template-parts/post/author-bio.php:150
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s yazı"
+msgstr[1] "%s yazı"
+
+#: template-parts/post/author-bio.php:175
+msgid "About Author"
+msgstr "Yazar Hakkında"
+
+#: template-parts/post/author-bio.php:190
+msgid "%s Post"
+msgid_plural "%s Posts"
+msgstr[0] "%s Yazı"
+msgstr[1] "%s Yazı"
+
+#: template-parts/post/author-bio.php:240
+msgid "View All Posts"
+msgstr "Tüm Yazıları Gör"
+
+#: template-parts/post/author-bio.php:250
+msgid "Website:"
+msgstr "Website:"
+
+#: template-parts/post/author-bio.php:265
+msgid "Recent Posts:"
+msgstr "Son Yazıları:"
+
+#: inc/classes/Admin.php:45
+msgid "PratikWP Dashboard"
+msgstr "PratikWP Kontrol Paneli"
+
+#: inc/classes/Admin.php:46
+msgid "Dashboard"
+msgstr "Kontrol Paneli"
+
+#: inc/classes/Admin.php:52
+msgid "Demo Import"
+msgstr "Demo İçe Aktarma"
+
+#: inc/classes/Admin.php:58
+msgid "System Info"
+msgstr "Sistem Bilgisi"
+
+#: inc/classes/Admin.php:64
+msgid "Settings"
+msgstr "Ayarlar"
+
+#. Theme Name
+msgid "PratikWP"
+msgstr "PratikWP"
+
+#. Theme Description
+msgid "Modern, fast and SEO-optimized WordPress theme with Elementor compatibility."
+msgstr "Elementor uyumlu, modern, hızlı ve SEO optimize edilmiş WordPress teması."
+
+#. Author
+msgid "PratikWP Team"
+msgstr "PratikWP Ekibi"
+
+#. Author URI
+msgid "https://pratikwp.com"
+msgstr "https://pratikwp.com"

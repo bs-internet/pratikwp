@@ -1,0 +1,631 @@
+{
+  "version": "1.0.0",
+  "templates": [
+    {
+      "id": "header-template-1",
+      "title": "Ana Header Şablonu",
+      "type": "header",
+      "conditions": [
+        "entire_site"
+      ],
+      "status": "publish",
+      "content": {
+        "elements": [
+          {
+            "id": "top-bar",
+            "elType": "section",
+            "settings": {
+              "background_background": "classic",
+              "background_color": "#2c3e50",
+              "padding": {
+                "unit": "px",
+                "top": "10",
+                "right": "0",
+                "bottom": "10",
+                "left": "0"
+              }
+            },
+            "elements": [
+              {
+                "id": "top-bar-container",
+                "elType": "container",
+                "settings": {
+                  "content_width": "boxed"
+                },
+                "elements": [
+                  {
+                    "id": "contact-info",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<div class=\"top-bar-left d-flex align-items-center text-white\">\n<span class=\"me-4\"><i class=\"fas fa-phone me-1\"></i> +90 (224) 123 45 67</span>\n<span class=\"me-4\"><i class=\"fas fa-envelope me-1\"></i> info@pratikwp.com</span>\n<span><i class=\"fas fa-clock me-1\"></i> Pzt-Cum 09:00-18:00</span>\n</div>",
+                      "text_color": "#ffffff"
+                    }
+                  },
+                  {
+                    "id": "social-links",
+                    "elType": "widget",
+                    "widgetType": "pratikwp-social-links",
+                    "settings": {
+                      "facebook_url": "https://facebook.com/pratikwp",
+                      "twitter_url": "https://twitter.com/pratikwp",
+                      "instagram_url": "https://instagram.com/pratikwp",
+                      "linkedin_url": "https://linkedin.com/company/pratikwp",
+                      "style": "icons",
+                      "color": "#ffffff",
+                      "hover_color": "#3498db"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "main-header",
+            "elType": "section",
+            "settings": {
+              "background_background": "classic",
+              "background_color": "#ffffff",
+              "box_shadow_box_shadow_type": "yes",
+              "box_shadow_box_shadow": {
+                "horizontal": 0,
+                "vertical": 2,
+                "blur": 20,
+                "spread": 0,
+                "color": "rgba(0,0,0,0.1)"
+              },
+              "sticky": "top",
+              "sticky_on": ["desktop", "tablet", "mobile"]
+            },
+            "elements": [
+              {
+                "id": "header-container",
+                "elType": "container",
+                "settings": {
+                  "content_width": "boxed"
+                },
+                "elements": [
+                  {
+                    "id": "site-logo",
+                    "elType": "widget",
+                    "widgetType": "pratikwp-site-logo",
+                    "settings": {
+                      "logo_size": {
+                        "unit": "px",
+                        "size": 150
+                      },
+                      "logo_mobile_size": {
+                        "unit": "px", 
+                        "size": 120
+                      }
+                    }
+                  },
+                  {
+                    "id": "main-navigation",
+                    "elType": "widget",
+                    "widgetType": "pratikwp-nav-menu",
+                    "settings": {
+                      "menu_location": "primary",
+                      "layout": "horizontal",
+                      "submenu_icon": "fa fa-chevron-down",
+                      "text_color": "#333333",
+                      "hover_color": "#3498db",
+                      "typography_font_family": "Montserrat",
+                      "typography_font_weight": "500"
+                    }
+                  },
+                  {
+                    "id": "header-actions",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                      "html": "<div class=\"header-actions d-flex align-items-center\">\n<button class=\"btn btn-link header-search\" data-bs-toggle=\"modal\" data-bs-target=\"#searchModal\">\n<i class=\"fas fa-search\"></i>\n</button>\n<a href=\"/iletisim\" class=\"btn btn-primary ms-3\">İletişim</a>\n</div>"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "footer-template-1", 
+      "title": "Ana Footer Şablonu",
+      "type": "footer",
+      "conditions": [
+        "entire_site"
+      ],
+      "status": "publish",
+      "content": {
+        "elements": [
+          {
+            "id": "footer-widgets",
+            "elType": "section",
+            "settings": {
+              "background_background": "classic",
+              "background_color": "#2c3e50",
+              "padding": {
+                "unit": "px",
+                "top": "60",
+                "right": "0", 
+                "bottom": "40",
+                "left": "0"
+              }
+            },
+            "elements": [
+              {
+                "id": "footer-container",
+                "elType": "container",
+                "settings": {
+                  "content_width": "boxed"
+                },
+                "elements": [
+                  {
+                    "id": "footer-col-1",
+                    "elType": "column",
+                    "settings": {
+                      "_column_size": 25,
+                      "_inline_size": 25
+                    },
+                    "elements": [
+                      {
+                        "id": "footer-brand",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<div class=\"footer-brand\">\n<img src=\"/wp-content/uploads/2024/01/logo-white.png\" alt=\"PratikWP\" class=\"footer-logo mb-3\" style=\"max-height: 50px;\">\n<p class=\"text-light\">Modern WordPress teması ile web sitenizi profesyonel bir seviyeye taşıyın.</p>\n<div class=\"footer-contact mt-3\">\n<p class=\"text-light mb-2\"><i class=\"fas fa-map-marker-alt me-2\"></i> Nilüfer, Bursa, Türkiye</p>\n<p class=\"text-light mb-2\"><i class=\"fas fa-phone me-2\"></i> +90 (224) 123 45 67</p>\n<p class=\"text-light mb-0\"><i class=\"fas fa-envelope me-2\"></i> info@pratikwp.com</p>\n</div>\n</div>",
+                          "text_color": "#ffffff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "footer-col-2",
+                    "elType": "column",
+                    "settings": {
+                      "_column_size": 25,
+                      "_inline_size": 25
+                    },
+                    "elements": [
+                      {
+                        "id": "footer-services",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<div class=\"footer-services\">\n<h5 class=\"text-white mb-3\">Hizmetlerimiz</h5>\n<ul class=\"list-unstyled\">\n<li class=\"mb-2\"><a href=\"/web-tasarim\" class=\"text-light text-decoration-none\"><i class=\"fas fa-chevron-right me-2\"></i>Web Tasarım</a></li>\n<li class=\"mb-2\"><a href=\"/wordpress-gelistirme\" class=\"text-light text-decoration-none\"><i class=\"fas fa-chevron-right me-2\"></i>WordPress Geliştirme</a></li>\n<li class=\"mb-2\"><a href=\"/seo-hizmetleri\" class=\"text-light text-decoration-none\"><i class=\"fas fa-chevron-right me-2\"></i>SEO Hizmetleri</a></li>\n<li class=\"mb-2\"><a href=\"/e-ticaret\" class=\"text-light text-decoration-none\"><i class=\"fas fa-chevron-right me-2\"></i>E-Ticaret</a></li>\n<li class=\"mb-2\"><a href=\"/hosting\" class=\"text-light text-decoration-none\"><i class=\"fas fa-chevron-right me-2\"></i>Hosting</a></li>\n</ul>\n</div>",
+                          "text_color": "#ffffff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "footer-col-3",
+                    "elType": "column", 
+                    "settings": {
+                      "_column_size": 25,
+                      "_inline_size": 25
+                    },
+                    "elements": [
+                      {
+                        "id": "footer-recent-posts",
+                        "elType": "widget",
+                        "widgetType": "pratikwp-recent-posts",
+                        "settings": {
+                          "title": "Son Blog Yazıları",
+                          "number": 3,
+                          "show_date": true,
+                          "show_thumbnail": true,
+                          "title_color": "#ffffff",
+                          "text_color": "#bdc3c7"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "footer-col-4",
+                    "elType": "column",
+                    "settings": {
+                      "_column_size": 25,
+                      "_inline_size": 25
+                    },
+                    "elements": [
+                      {
+                        "id": "footer-newsletter",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<div class=\"footer-newsletter\">\n<h5 class=\"text-white mb-3\">Newsletter</h5>\n<p class=\"text-light mb-3\">Güncel haberler ve özel tekliflerden haberdar olun.</p>\n<form class=\"newsletter-form\">\n<div class=\"input-group mb-3\">\n<input type=\"email\" class=\"form-control\" placeholder=\"E-posta adresiniz\">\n<button class=\"btn btn-primary\" type=\"submit\">\n<i class=\"fas fa-paper-plane\"></i>\n</button>\n</div>\n</form>\n<small class=\"text-muted\">Gizliliğinize saygı duyuyoruz.</small>\n</div>",
+                          "text_color": "#ffffff"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "footer-copyright",
+            "elType": "section",
+            "settings": {
+              "background_background": "classic",
+              "background_color": "#1a252f",
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "0",
+                "bottom": "20", 
+                "left": "0"
+              }
+            },
+            "elements": [
+              {
+                "id": "copyright-container",
+                "elType": "container",
+                "settings": {
+                  "content_width": "boxed"
+                },
+                "elements": [
+                  {
+                    "id": "copyright-text",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<div class=\"copyright-wrapper d-flex flex-column flex-md-row justify-content-between align-items-center\">\n<div class=\"copyright-text text-light mb-2 mb-md-0\">\n<p class=\"mb-0\">© 2024 PratikWP. Tüm hakları saklıdır.</p>\n</div>\n<div class=\"footer-menu\">\n<a href=\"/gizlilik-politikasi\" class=\"text-light text-decoration-none me-3\">Gizlilik</a>\n<a href=\"/kullanim-sartlari\" class=\"text-light text-decoration-none me-3\">Şartlar</a>\n<a href=\"/sitemap\" class=\"text-light text-decoration-none\">Sitemap</a>\n</div>\n</div>",
+                      "text_color": "#ffffff",
+                      "text_align": "center"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-page-template",
+      "title": "Ana Sayfa Şablonu",
+      "type": "page",
+      "conditions": [
+        "front_page"
+      ],
+      "status": "publish",
+      "content": {
+        "elements": [
+          {
+            "id": "hero-section",
+            "elType": "section",
+            "settings": {
+              "background_background": "gradient",
+              "background_color": "#3498db",
+              "background_color_b": "#2c3e50",
+              "background_gradient_angle": {
+                "unit": "deg",
+                "size": 45
+              },
+              "background_image": {
+                "url": "/wp-content/uploads/2024/01/hero-bg.jpg"
+              },
+              "background_position": "center center",
+              "background_attachment": "fixed",
+              "background_size": "cover",
+              "padding": {
+                "unit": "px",
+                "top": "100",
+                "right": "0",
+                "bottom": "100",
+                "left": "0"
+              },
+              "min_height": {
+                "unit": "vh",
+                "size": 80
+              }
+            },
+            "elements": [
+              {
+                "id": "hero-container",
+                "elType": "container",
+                "elements": [
+                  {
+                    "id": "hero-content",
+                    "elType": "column",
+                    "settings": {
+                      "_column_size": 60
+                    },
+                    "elements": [
+                      {
+                        "id": "hero-subtitle",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "Modern WordPress Teması",
+                          "size": "h3",
+                          "title_color": "#ffffff",
+                          "typography_font_family": "Montserrat",
+                          "typography_font_weight": "400"
+                        }
+                      },
+                      {
+                        "id": "hero-title",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "Web Sitenizi Profesyonel Seviyeye Taşıyın",
+                          "size": "h1",
+                          "title_color": "#ffffff",
+                          "typography_font_family": "Montserrat",
+                          "typography_font_weight": "700",
+                          "typography_font_size": {
+                            "unit": "px",
+                            "size": 48
+                          }
+                        }
+                      },
+                      {
+                        "id": "hero-description",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Elementor uyumlu, SEO optimize edilmiş ve responsive tasarımı ile PratikWP teması web siteniz için mükemmel bir başlangıç noktası.</p>",
+                          "text_color": "#ecf0f1",
+                          "typography_font_size": {
+                            "unit": "px",
+                            "size": 18
+                          }
+                        }
+                      },
+                      {
+                        "id": "hero-buttons",
+                        "elType": "widget",
+                        "widgetType": "button",
+                        "settings": {
+                          "text": "Hemen Başla",
+                          "link": {
+                            "url": "/hizmetler"
+                          },
+                          "button_type": "primary",
+                          "size": "lg",
+                          "background_color": "#e74c3c",
+                          "hover_background_color": "#c0392b"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "hero-image",
+                    "elType": "column",
+                    "settings": {
+                      "_column_size": 40
+                    },
+                    "elements": [
+                      {
+                        "id": "hero-img",
+                        "elType": "widget",
+                        "widgetType": "image",
+                        "settings": {
+                          "image": {
+                            "url": "/wp-content/uploads/2024/01/hero-mockup.png"
+                          },
+                          "image_size": "full",
+                          "caption_source": "none"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "features-section",
+            "elType": "section",
+            "settings": {
+              "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80", 
+                "left": "0"
+              }
+            },
+            "elements": [
+              {
+                "id": "features-container",
+                "elType": "container",
+                "elements": [
+                  {
+                    "id": "section-title",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Neden PratikWP?",
+                      "size": "h2",
+                      "align": "center",
+                      "title_color": "#2c3e50",
+                      "typography_font_family": "Montserrat"
+                    }
+                  },
+                  {
+                    "id": "features-grid",
+                    "elType": "container",
+                    "settings": {
+                      "flex_direction": "row",
+                      "flex_wrap": "wrap"
+                    },
+                    "elements": [
+                      {
+                        "id": "feature-1",
+                        "elType": "column",
+                        "settings": {
+                          "_column_size": 33
+                        },
+                        "elements": [
+                          {
+                            "id": "feature-icon-1",
+                            "elType": "widget",
+                            "widgetType": "icon",
+                            "settings": {
+                              "selected_icon": {
+                                "value": "fas fa-bolt",
+                                "library": "fa-solid"
+                              },
+                              "icon_color": "#3498db",
+                              "size": {
+                                "unit": "px",
+                                "size": 48
+                              },
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-title-1",
+                            "elType": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                              "title": "Yüksek Performans",
+                              "size": "h4",
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-desc-1",
+                            "elType": "widget",
+                            "widgetType": "text-editor",
+                            "settings": {
+                              "editor": "<p>Optimize edilmiş kod yapısı ve modern teknolojiler ile yüksek performans sağlar.</p>",
+                              "text_align": "center"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "feature-2",
+                        "elType": "column",
+                        "settings": {
+                          "_column_size": 33
+                        },
+                        "elements": [
+                          {
+                            "id": "feature-icon-2",
+                            "elType": "widget",
+                            "widgetType": "icon",
+                            "settings": {
+                              "selected_icon": {
+                                "value": "fas fa-paint-brush",
+                                "library": "fa-solid"
+                              },
+                              "icon_color": "#e74c3c",
+                              "size": {
+                                "unit": "px",
+                                "size": 48
+                              },
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-title-2",
+                            "elType": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                              "title": "Elementor Uyumlu",
+                              "size": "h4",
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-desc-2",
+                            "elType": "widget",
+                            "widgetType": "text-editor",
+                            "settings": {
+                              "editor": "<p>Elementor ile tamamen uyumlu, sürükle-bırak ile kolay tasarım imkanı.</p>",
+                              "text_align": "center"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "feature-3",
+                        "elType": "column",
+                        "settings": {
+                          "_column_size": 33
+                        },
+                        "elements": [
+                          {
+                            "id": "feature-icon-3",
+                            "elType": "widget",
+                            "widgetType": "icon",
+                            "settings": {
+                              "selected_icon": {
+                                "value": "fas fa-mobile-alt",
+                                "library": "fa-solid"
+                              },
+                              "icon_color": "#27ae60",
+                              "size": {
+                                "unit": "px",
+                                "size": 48
+                              },
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-title-3",
+                            "elType": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                              "title": "Responsive Tasarım",
+                              "size": "h4",
+                              "align": "center"
+                            }
+                          },
+                          {
+                            "id": "feature-desc-3",
+                            "elType": "widget",
+                            "widgetType": "text-editor",
+                            "settings": {
+                              "editor": "<p>Tüm cihazlarda mükemmel görünüm ve kullanıcı deneyimi sağlar.</p>",
+                              "text_align": "center"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "global_settings": {
+    "custom_css": ".elementor-section .elementor-container { max-width: 1200px; }\n\n.elementor-button { transition: all 0.3s ease; }\n\n.elementor-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }",
+    "page_settings": {
+      "hide_title": "yes"
+    }
+  },
+  "widgets": [
+    {
+      "name": "pratikwp-site-logo",
+      "title": "Site Logo",
+      "description": "Displays the site logo with customization options"
+    },
+    {
+      "name": "pratikwp-nav-menu", 
+      "title": "Navigation Menu",
+      "description": "Displays navigation menu with styling options"
+    },
+    {
+      "name": "pratikwp-social-links",
+      "title": "Social Media Links", 
+      "description": "Displays social media icons and links"
+    },
+    {
+      "name": "pratikwp-recent-posts",
+      "title": "Recent Posts",
+      "description": "Displays recent blog posts with thumbnails"
+    }
+  ]
+}
