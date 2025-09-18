@@ -318,29 +318,6 @@ class PratikWp_Post_Settings {
                     </div>
                 </div>
             </div>
-
-            <!-- Performance Options -->
-            <div class="meta-box-section">
-                <h4 class="section-title"><?php esc_html_e('Performans Seçenekleri', 'pratikwp'); ?></h4>
-                
-                <label class="checkbox-label">
-                    <input type="checkbox" name="pratikwp_disable_lazy_loading" value="1" 
-                           <?php checked(get_post_meta($post->ID, '_pratikwp_disable_lazy_loading', true), '1'); ?> />
-                    <?php esc_html_e('Lazy Loading\'i Devre Dışı Bırak', 'pratikwp'); ?>
-                </label>
-                
-                <label class="checkbox-label">
-                    <input type="checkbox" name="pratikwp_critical_css" value="1" 
-                           <?php checked(get_post_meta($post->ID, '_pratikwp_critical_css', true), '1'); ?> />
-                    <?php esc_html_e('Critical CSS Kullan', 'pratikwp'); ?>
-                </label>
-                
-                <label class="checkbox-label">
-                    <input type="checkbox" name="pratikwp_preload_images" value="1" 
-                           <?php checked(get_post_meta($post->ID, '_pratikwp_preload_images', true), '1'); ?> />
-                    <?php esc_html_e('Önemli Görselleri Önceden Yükle', 'pratikwp'); ?>
-                </label>
-            </div>
         </div>
 
         <script>

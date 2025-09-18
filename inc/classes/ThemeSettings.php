@@ -19,8 +19,6 @@ class PratikWp_ThemeSettings {
         add_action('admin_menu', [$this, 'add_admin_menu']);
         add_action('admin_init', [$this, 'register_settings']);
         add_action('wp_ajax_pratikwp_reset_settings', [$this, 'reset_settings']);
-        add_action('wp_ajax_pratikwp_export_settings', [$this, 'export_settings']);
-        add_action('wp_ajax_pratikwp_import_settings', [$this, 'import_settings']);
     }
 
     /**
@@ -64,24 +62,6 @@ class PratikWp_ThemeSettings {
             $this->page_slug . '-social',
             [$this, 'social_page']
         );
-        
-        add_submenu_page(
-            $this->page_slug,
-            __('Performans', 'pratikwp'),
-            __('Performans', 'pratikwp'),
-            'manage_options',
-            $this->page_slug . '-performance',
-            [$this, 'performance_page']
-        );
-        
-        add_submenu_page(
-            $this->page_slug,
-            __('İçe/Dışa Aktarma', 'pratikwp'),
-            __('İçe/Dışa Aktarma', 'pratikwp'),
-            'manage_options',
-            $this->page_slug . '-import-export',
-            [$this, 'import_export_page']
-        );
     }
 
     /**
@@ -114,26 +94,6 @@ class PratikWp_ThemeSettings {
                 'type' => 'string',
                 'sanitize_callback' => 'esc_url_raw',
                 'default' => ''
-            ]);
-        }
-        
-        // Performance settings
-        $performance_fields = [
-            'enable_minification' => ['type' => 'boolean', 'default' => false],
-            'enable_lazy_loading' => ['type' => 'boolean', 'default' => true],
-            'enable_gzip' => ['type' => 'boolean', 'default' => true],
-            'remove_query_strings' => ['type' => 'boolean', 'default' => true],
-            'disable_emojis' => ['type' => 'boolean', 'default' => true],
-            'remove_wp_version' => ['type' => 'boolean', 'default' => true],
-            'limit_revisions' => ['type' => 'integer', 'default' => 3],
-            'autosave_interval' => ['type' => 'integer', 'default' => 300]
-        ];
-        
-        foreach ($performance_fields as $field => $args) {
-            register_setting($this->option_group, $field, [
-                'type' => $args['type'],
-                'sanitize_callback' => $args['type'] === 'boolean' ? 'rest_sanitize_boolean' : 'absint',
-                'default' => $args['default']
             ]);
         }
         
@@ -338,129 +298,6 @@ class PratikWp_ThemeSettings {
     }
 
     /**
-     * Performance page
-     */
-    public function performance_page() {
-        ?>
-        <div class="wrap pratikwp-admin-page">
-            <h1><?php esc_html_e('Performans Ayarları', 'pratikwp'); ?></h1>
-            
-            <form method="post" action="options.php">
-                <?php settings_fields($this->option_group); ?>
-                
-                <table class="form-table">
-                    <tr>
-                        <th scope="row"><?php esc_html_e('CSS/JS Sıkıştırma', 'pratikwp'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="enable_minification" value="1" <?php checked(get_option('enable_minification')); ?> />
-                                <?php esc_html_e('CSS ve JavaScript dosyalarını sıkıştır', 'pratikwp'); ?>
-                            </label>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('Lazy Loading', 'pratikwp'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="enable_lazy_loading" value="1" <?php checked(get_option('enable_lazy_loading', true)); ?> />
-                                <?php esc_html_e('Görselleri geç yükle', 'pratikwp'); ?>
-                            </label>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('GZIP Sıkıştırma', 'pratikwp'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="enable_gzip" value="1" <?php checked(get_option('enable_gzip', true)); ?> />
-                                <?php esc_html_e('GZIP sıkıştırmayı etkinleştir', 'pratikwp'); ?>
-                            </label>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('Emoji Devre Dışı', 'pratikwp'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="disable_emojis" value="1" <?php checked(get_option('disable_emojis', true)); ?> />
-                                <?php esc_html_e('WordPress emoji scriptlerini devre dışı bırak', 'pratikwp'); ?>
-                            </label>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('WordPress Sürümü Gizle', 'pratikwp'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="remove_wp_version" value="1" <?php checked(get_option('remove_wp_version', true)); ?> />
-                                <?php esc_html_e('WordPress sürüm bilgisini HTML\'den kaldır', 'pratikwp'); ?>
-                            </label>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('Revizyon Limiti', 'pratikwp'); ?></th>
-                        <td>
-                            <input type="number" name="limit_revisions" value="<?php echo esc_attr(get_option('limit_revisions', 3)); ?>" min="0" max="20" />
-                            <p class="description"><?php esc_html_e('Yazı revizyonlarının maksimum sayısı (0 = sınırsız)', 'pratikwp'); ?></p>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th scope="row"><?php esc_html_e('Otomatik Kaydetme Aralığı', 'pratikwp'); ?></th>
-                        <td>
-                            <input type="number" name="autosave_interval" value="<?php echo esc_attr(get_option('autosave_interval', 300)); ?>" min="60" max="3600" />
-                            <p class="description"><?php esc_html_e('Saniye cinsinden otomatik kaydetme aralığı', 'pratikwp'); ?></p>
-                        </td>
-                    </tr>
-                </table>
-                
-                <?php submit_button(); ?>
-            </form>
-        </div>
-        <?php
-    }
-
-    /**
-     * Import/Export page
-     */
-    public function import_export_page() {
-        ?>
-        <div class="wrap pratikwp-admin-page">
-            <h1><?php esc_html_e('İçe/Dışa Aktarma', 'pratikwp'); ?></h1>
-            
-            <div class="pratikwp-import-export">
-                <div class="pratikwp-export-section">
-                    <h3><?php esc_html_e('Ayarları Dışa Aktar', 'pratikwp'); ?></h3>
-                    <p><?php esc_html_e('Tüm tema ayarlarınızı JSON formatında dışa aktarın.', 'pratikwp'); ?></p>
-                    <button type="button" class="button button-primary" id="export-settings">
-                        <?php esc_html_e('Ayarları Dışa Aktar', 'pratikwp'); ?>
-                    </button>
-                </div>
-                
-                <div class="pratikwp-import-section">
-                    <h3><?php esc_html_e('Ayarları İçe Aktar', 'pratikwp'); ?></h3>
-                    <p><?php esc_html_e('Daha önce dışa aktardığınız ayarları yükleyin.', 'pratikwp'); ?></p>
-                    <input type="file" id="import-file" accept=".json" />
-                    <button type="button" class="button button-secondary" id="import-settings">
-                        <?php esc_html_e('Ayarları İçe Aktar', 'pratikwp'); ?>
-                    </button>
-                </div>
-                
-                <div class="pratikwp-reset-section">
-                    <h3><?php esc_html_e('Ayarları Sıfırla', 'pratikwp'); ?></h3>
-                    <p><?php esc_html_e('Tüm tema ayarlarını varsayılan değerlere döndürün.', 'pratikwp'); ?></p>
-                    <button type="button" class="button button-secondary" id="reset-settings">
-                        <?php esc_html_e('Tüm Ayarları Sıfırla', 'pratikwp'); ?>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <?php
-    }
-
-    /**
      * Reset settings via AJAX
      */
     public function reset_settings() {
@@ -482,55 +319,5 @@ class PratikWp_ThemeSettings {
         }
         
         wp_send_json_success(__('Ayarlar başarıyla sıfırlandı.', 'pratikwp'));
-    }
-
-    /**
-     * Export settings via AJAX
-     */
-    public function export_settings() {
-        check_ajax_referer('pratikwp_admin_nonce', 'nonce');
-        
-        if (!current_user_can('manage_options')) {
-            wp_die(__('Yetkiniz yok.', 'pratikwp'));
-        }
-        
-        $settings = [];
-        $option_names = wp_load_alloptions();
-        
-        foreach ($option_names as $name => $value) {
-            if (strpos($name, 'firma_') === 0 || strpos($name, 'sosyal_') === 0) {
-                $settings[$name] = $value;
-            }
-        }
-        
-        wp_send_json_success([
-            'data' => json_encode($settings, JSON_PRETTY_PRINT),
-            'filename' => 'pratikwp-settings-' . date('Y-m-d-H-i-s') . '.json'
-        ]);
-    }
-
-    /**
-     * Import settings via AJAX
-     */
-    public function import_settings() {
-        check_ajax_referer('pratikwp_admin_nonce', 'nonce');
-        
-        if (!current_user_can('manage_options')) {
-            wp_die(__('Yetkiniz yok.', 'pratikwp'));
-        }
-        
-        $import_data = json_decode(stripslashes($_POST['import_data']), true);
-        
-        if (!$import_data) {
-            wp_send_json_error(__('Geçersiz dosya formatı.', 'pratikwp'));
-        }
-        
-        foreach ($import_data as $option_name => $option_value) {
-            if (strpos($option_name, 'firma_') === 0 || strpos($option_name, 'sosyal_') === 0) {
-                update_option($option_name, sanitize_text_field($option_value));
-            }
-        }
-        
-        wp_send_json_success(__('Ayarlar başarıyla içe aktarıldı.', 'pratikwp'));
     }
 }

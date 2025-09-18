@@ -125,7 +125,6 @@ class PratikWp_Theme {
         // New systems
         new PratikWp_Customizer();
         new PratikWp_Elementor();
-        new PratikWp_Performance();
         new PratikWp_Admin();
         
         // Widgets

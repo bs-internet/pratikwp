@@ -267,25 +267,6 @@ class PratikWp_Page_Settings {
                     </select>
                 </div>
 
-                <!-- Performance Settings -->
-                <div class="meta-box-section">
-                    <h4 class="section-title"><?php esc_html_e('Performans Ayarları', 'pratikwp'); ?></h4>
-                    
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="pratikwp_disable_elementor_css" value="1" 
-                               <?php checked(get_post_meta($post->ID, '_pratikwp_disable_elementor_css', true), '1'); ?> />
-                        <?php esc_html_e('Elementor CSS\'ini Devre Dışı Bırak', 'pratikwp'); ?>
-                    </label>
-                    <p class="description"><?php esc_html_e('Elementor kullanmıyorsanız CSS\'ini yüklemeyi önler', 'pratikwp'); ?></p>
-                    
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="pratikwp_preload_fonts" value="1" 
-                               <?php checked(get_post_meta($post->ID, '_pratikwp_preload_fonts', true), '1'); ?> />
-                        <?php esc_html_e('Font Preload', 'pratikwp'); ?>
-                    </label>
-                    <p class="description"><?php esc_html_e('Kritik fontları önceden yükler', 'pratikwp'); ?></p>
-                </div>
-
                 <!-- Social Media -->
                 <div class="meta-box-section">
                     <h4 class="section-title"><?php esc_html_e('Sosyal Medya', 'pratikwp'); ?></h4>

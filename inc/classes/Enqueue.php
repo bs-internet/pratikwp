@@ -350,33 +350,6 @@ class PratikWp_Enqueue {
     }
 
     /**
-     * Remove unused CSS/JS for performance
-     */
-    public function optimize_assets() {
-        if (!get_theme_mod('remove_unused_assets', false)) {
-            return;
-        }
-        
-        // Remove block library CSS on non-block pages
-        if (!has_blocks()) {
-            wp_dequeue_style('wp-block-library');
-            wp_dequeue_style('wp-block-library-theme');
-        }
-        
-        // Remove dashicons on frontend for non-admin users
-        if (!is_admin_bar_showing()) {
-            wp_dequeue_style('dashicons');
-        }
-        
-        // Remove jQuery Migrate
-        if (!is_admin()) {
-            wp_deregister_script('jquery');
-            wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), false, null, true);
-            wp_enqueue_script('jquery');
-        }
-    }
-
-    /**
      * Inline critical CSS
      */
     public function inline_critical_css() {
