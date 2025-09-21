@@ -1,0 +1,309 @@
+/*!
+ * PratikWP Admin CSS
+ * Modernized for better UX
+ * Version: 1.0.0
+ */
+
+/* 1. Değişkenler ve Temel Kurulum */
+/* -------------------------------------------------- */
+:root {
+    --pratikwp-primary: #2271b1;
+    --pratikwp-secondary: #50575e;
+    --pratikwp-bg: #f6f7f7;
+    --pratikwp-card-bg: #ffffff;
+    --pratikwp-border: #dcdcde;
+    --pratikwp-text: #2c3338;
+    --pratikwp-meta: #50575e;
+    --pratikwp-spacing: 1.25rem;
+    --pratikwp-radius: 4px;
+    --pratikwp-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+/* 2. Genel Kapsayıcı ve Tipografi */
+/* -------------------------------------------------- */
+.pratikwp-admin-wrap {
+    margin-top: 20px;
+}
+
+.pratikwp-admin-wrap h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: var(--pratikwp-spacing);
+}
+
+.pratikwp-admin-wrap h2, .pratikwp-admin-wrap h3 {
+    margin-top: 0;
+}
+
+/* 3. Grid Sistemi */
+/* -------------------------------------------------- */
+.pratikwp-grid {
+    display: grid;
+    gap: var(--pratikwp-spacing);
+}
+.pratikwp-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.pratikwp-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 4. Kart Yapısı */
+/* -------------------------------------------------- */
+.pratikwp-card {
+    background: var(--pratikwp-card-bg);
+    border: 1px solid var(--pratikwp-border);
+    border-radius: var(--pratikwp-radius);
+    margin-bottom: var(--pratikwp-spacing);
+    box-shadow: var(--pratikwp-shadow);
+}
+.padding {
+    padding: 20px;
+}
+.pratikwp-card .card-header {
+    padding: var(--pratikwp-spacing);
+    border-bottom: 1px solid var(--pratikwp-border);
+}
+.pratikwp-card .card-header h2, .pratikwp-card .card-header h3,
+.pratikwp-card .card-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.pratikwp-card .card-body {
+    padding: var(--pratikwp-spacing);
+}
+.pratikwp-card .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: var(--pratikwp-spacing);
+    background: var(--pratikwp-bg);
+    border-top: 1px solid var(--pratikwp-border);
+}
+
+/* 5. Form ve Ayar Bileşenleri */
+/* -------------------------------------------------- */
+.pratikwp-setting-row {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: var(--pratikwp-spacing) 0;
+    border-bottom: 1px solid var(--pratikwp-bg);
+}
+.pratikwp-setting-row:first-child {
+    padding-top: 0;
+}
+.pratikwp-setting-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.pratikwp-setting-label label {
+    font-weight: 600;
+    color: var(--pratikwp-text);
+}
+.pratikwp-setting-label .description {
+    font-size: 13px;
+    color: var(--pratikwp-meta);
+    font-style: normal;
+}
+.pratikwp-setting-field input[type="text"],
+.pratikwp-setting-field input[type="url"],
+.pratikwp-setting-field input[type="email"],
+.pratikwp-setting-field input[type="number"],
+.pratikwp-setting-field input[type="time"],
+.pratikwp-setting-field textarea,
+.pratikwp-setting-field select {
+    width: 100%;
+    max-width: 450px;
+}
+.pratikwp-setting-field .small-text {
+    width: 100px;
+}
+
+/* Medya Yükleyici */
+.pratikwp-media-uploader {
+    display: flex;
+    gap: 10px;
+}
+.pratikwp-media-uploader .regular-text {
+    flex-grow: 1;
+}
+.pratikwp-media-preview {
+    margin-top: 10px;
+}
+.pratikwp-media-preview img {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid var(--pratikwp-border);
+    border-radius: var(--pratikwp-radius);
+    padding: 3px;
+}
+
+/* 6. UI Bileşenleri (Uyarı, Badge, Buton) */
+/* -------------------------------------------------- */
+.pratikwp-alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--pratikwp-radius);
+    border: 1px solid;
+    border-left-width: 4px;
+}
+.pratikwp-alert-success {
+    background-color: #d1e7dd;
+    border-color: #75b798;
+    color: #0f5132;
+}
+
+.pratikwp-badge {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 1;
+}
+.pratikwp-badge.pratikwp-badge-success {
+    color: #00a32a;
+}
+
+/* Butonlar (Genel) */
+.pratikwp-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 12px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.pratikwp-btn.pratikwp-btn-primary {
+    background: var(--pratikwp-primary);
+    border-color: var(--pratikwp-primary);
+    color: #fff;
+}
+.pratikwp-btn.pratikwp-btn-secondary {
+    background: var(--pratikwp-card-bg);
+    border-color: var(--pratikwp-primary);
+    color: var(--pratikwp-primary);
+}
+.pratikwp-btn.pratikwp-btn-secondary:hover {
+    background: var(--pratikwp-primary);
+    color: #fff;
+}
+
+/* 7. Dashboard Sayfasına Özel Stiller */
+/* -------------------------------------------------- */
+.pratikwp-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.pratikwp-version-tag {
+    background-color: #f0f0f1;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    color: #50575e;
+}
+.pratikwp-quick-action {
+    display: block;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--pratikwp-text);
+    transition: all 0.2s ease-in-out;
+}
+.pratikwp-quick-action:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-color: var(--pratikwp-primary);
+}
+.pratikwp-quick-action .dashicons {
+    font-size: 36px;
+    width: 100%;
+    height: 36px;
+    margin-bottom: 0.75rem;
+    color: var(--pratikwp-primary);
+}
+.pratikwp-quick-action h4 {
+    margin: 0;
+    font-size: 14px;
+}
+.pratikwp-info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pratikwp-info-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--pratikwp-bg);
+}
+.pratikwp-info-list li:last-child {
+    border-bottom: none;
+}
+.pratikwp-info-list strong {
+    color: var(--pratikwp-text);
+}
+.pratikwp-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+.pratikwp-status-badge.is-success {
+    background-color: #e3f5e5;
+    color: #2d8540;
+}
+.pratikwp-status-badge.is-warning {
+    background-color: #fff8e5;
+    color: #94660c;
+}
+.pratikwp-status-badge.is-danger {
+    background-color: #fbeaea;
+    color: #c92c2c;
+}
+
+/* 8. Mobil Uyumluluk */
+/* -------------------------------------------------- */
+@media (max-width: 960px) {
+    .pratikwp-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 782px) {
+    .pratikwp-setting-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .pratikwp-setting-label {
+        margin-bottom: 5px;
+    }
+    .pratikwp-setting-field input,
+    .pratikwp-setting-field textarea,
+    .pratikwp-setting-field select {
+        max-width: 100%;
+    }
+    .pratikwp-grid-2,
+    .pratikwp-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}

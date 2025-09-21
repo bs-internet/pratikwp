@@ -1,0 +1,699 @@
+/*!
+ * PratikWP Elementor CSS
+ * Elementor Widget & Theme Builder Styles
+ * Version: 1.0.0
+ */
+
+/* CSS Variables for Elementor */
+:root {
+    --pratikwp-elementor-primary: #007cba;
+    --pratikwp-elementor-secondary: #6c757d;
+    --pratikwp-elementor-accent: #28a745;
+    --pratikwp-elementor-text: #333333;
+    --pratikwp-elementor-light: #f8f9fa;
+    --pratikwp-elementor-dark: #212529;
+    --pratikwp-elementor-white: #ffffff;
+    --pratikwp-elementor-border: #e9ecef;
+    
+    /* Spacing */
+    --pratikwp-elementor-spacing: 1rem;
+    --pratikwp-elementor-spacing-sm: 0.5rem;
+    --pratikwp-elementor-spacing-lg: 1.5rem;
+    --pratikwp-elementor-spacing-xl: 2rem;
+    --pratikwp-elementor-spacing-xxl: 3rem;
+    
+    /* Border radius */
+    --pratikwp-elementor-border-radius: 6px;
+    --pratikwp-elementor-border-radius-sm: 4px;
+    --pratikwp-elementor-border-radius-lg: 12px;
+    
+    /* Shadows */
+    --pratikwp-elementor-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --pratikwp-elementor-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --pratikwp-elementor-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions */
+    --pratikwp-elementor-transition: all 0.3s ease;
+    --pratikwp-elementor-transition-fast: all 0.2s ease;
+}
+
+/* Theme Builder Locations */
+.elementor-location-header {
+    position: relative;
+    z-index: 999;
+}
+
+.elementor-location-footer {
+    margin-top: auto;
+}
+
+.elementor-location-single {
+    padding: var(--pratikwp-elementor-spacing-xl) 0;
+}
+
+.elementor-location-archive {
+    padding: var(--pratikwp-elementor-spacing-xl) 0;
+}
+
+/* Custom Elementor Widgets */
+
+/* Site Logo Widget */
+.pratikwp-site-logo {
+    display: inline-block;
+}
+
+.pratikwp-site-logo img {
+    max-width: 100%;
+    height: auto;
+    transition: var(--pratikwp-elementor-transition);
+}
+
+.pratikwp-site-logo:hover img {
+    transform: scale(1.05);
+}
+
+.pratikwp-site-logo.logo-center {
+    text-align: center;
+}
+
+.pratikwp-site-logo.logo-right {
+    text-align: right;
+}
+
+/* Navigation Menu Widget */
+.pratikwp-nav-menu {
+    position: relative;
+}
+
+.pratikwp-nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.pratikwp-nav-menu li {
+    position: relative;
+    margin: 0;
+}
+
+.pratikwp-nav-menu a {
+    display: block;
+    padding: var(--pratikwp-elementor-spacing-sm) var(--pratikwp-elementor-spacing);
+    color: var(--pratikwp-elementor-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--pratikwp-elementor-transition-fast);
+    border-radius: var(--pratikwp-elementor-border-radius-sm);
+}
+
+.pratikwp-nav-menu a:hover,
+.pratikwp-nav-menu .current-menu-item > a,
+.pratikwp-nav-menu .current-page-ancestor > a {
+    color: var(--pratikwp-elementor-primary);
+    background: rgba(0, 124, 186, 0.1);
+}
+
+/* Dropdown Submenu */
+.pratikwp-nav-menu ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--pratikwp-elementor-white);
+    box-shadow: var(--pratikwp-elementor-shadow);
+    border-radius: var(--pratikwp-elementor-border-radius);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--pratikwp-elementor-transition);
+    z-index: 1000;
+    flex-direction: column;
+    border: 1px solid var(--pratikwp-elementor-border);
+}
+
+.pratikwp-nav-menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.pratikwp-nav-menu ul ul a {
+    padding: var(--pratikwp-elementor-spacing-sm) var(--pratikwp-elementor-spacing);
+    border-bottom: 1px solid var(--pratikwp-elementor-border);
+    white-space: nowrap;
+}
+
+.pratikwp-nav-menu ul ul li:last-child a {
+    border-bottom: none;
+}
+
+/* Third level submenu */
+.pratikwp-nav-menu ul ul ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Mobile Menu Styles */
+.pratikwp-nav-menu.mobile-menu {
+    display: none;
+}
+
+.pratikwp-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: var(--pratikwp-elementor-spacing-sm);
+    cursor: pointer;
+    color: var(--pratikwp-elementor-text);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .pratikwp-nav-menu.desktop-menu {
+        display: none;
+    }
+    
+    .pratikwp-mobile-toggle {
+        display: block;
+    }
+    
+    .pratikwp-nav-menu.mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--pratikwp-elementor-white);
+        box-shadow: var(--pratikwp-elementor-shadow-lg);
+        transition: var(--pratikwp-elementor-transition);
+        z-index: 9999;
+        overflow-y: auto;
+        padding: var(--pratikwp-elementor-spacing-xl) 0;
+    }
+    
+    .pratikwp-nav-menu.mobile-menu.active {
+        left: 0;
+    }
+    
+    .pratikwp-nav-menu.mobile-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .pratikwp-nav-menu.mobile-menu ul ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: var(--pratikwp-elementor-light);
+        margin-left: var(--pratikwp-elementor-spacing);
+    }
+}
+
+/* Post Meta Widget */
+.pratikwp-post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pratikwp-elementor-spacing);
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--pratikwp-elementor-secondary);
+}
+
+.pratikwp-post-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--pratikwp-elementor-spacing-sm);
+}
+
+.pratikwp-post-meta-item i {
+    font-size: 0.875rem;
+    color: var(--pratikwp-elementor-primary);
+}
+
+.pratikwp-post-meta-item a {
+    color: var(--pratikwp-elementor-secondary);
+    text-decoration: none;
+    transition: var(--pratikwp-elementor-transition-fast);
+}
+
+.pratikwp-post-meta-item a:hover {
+    color: var(--pratikwp-elementor-primary);
+}
+
+.pratikwp-post-meta.meta-style-inline {
+    display: inline-flex;
+}
+
+.pratikwp-post-meta.meta-style-stack {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pratikwp-elementor-spacing-sm);
+}
+
+/* Breadcrumbs Widget */
+.pratikwp-breadcrumbs {
+    padding: var(--pratikwp-elementor-spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+.pratikwp-breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.pratikwp-breadcrumbs li {
+    margin: 0;
+}
+
+.pratikwp-breadcrumbs a {
+    color: var(--pratikwp-elementor-secondary);
+    text-decoration: none;
+    transition: var(--pratikwp-elementor-transition-fast);
+}
+
+.pratikwp-breadcrumbs a:hover {
+    color: var(--pratikwp-elementor-primary);
+}
+
+.pratikwp-breadcrumbs .separator {
+    margin: 0 var(--pratikwp-elementor-spacing-sm);
+    color: var(--pratikwp-elementor-secondary);
+}
+
+.pratikwp-breadcrumbs .current {
+    color: var(--pratikwp-elementor-text);
+    font-weight: 500;
+}
+
+/* Company Info Widget */
+.pratikwp-company-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pratikwp-elementor-spacing);
+}
+
+.pratikwp-company-info.layout-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pratikwp-company-info.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--pratikwp-elementor-spacing);
+}
+
+.pratikwp-company-info.layout-card {
+    gap: var(--pratikwp-elementor-spacing-lg);
+}
+
+.pratikwp-company-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--pratikwp-elementor-spacing-sm);
+    padding: var(--pratikwp-elementor-spacing-sm);
+    border-radius: var(--pratikwp-elementor-border-radius);
+    transition: var(--pratikwp-elementor-transition);
+}
+
+.pratikwp-company-info.layout-card .pratikwp-company-info-item {
+    background: var(--pratikwp-elementor-white);
+    border: 1px solid var(--pratikwp-elementor-border);
+    box-shadow: var(--pratikwp-elementor-shadow);
+    padding: var(--pratikwp-elementor-spacing);
+}
+
+.pratikwp-company-info.layout-card .pratikwp-company-info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--pratikwp-elementor-shadow-hover);
+}
+
+.pratikwp-company-info-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pratikwp-elementor-primary);
+    color: var(--pratikwp-elementor-white);
+    border-radius: var(--pratikwp-elementor-border-radius);
+    font-size: 1.2rem;
+}
+
+.pratikwp-company-info-content {
+    flex: 1;
+}
+
+.pratikwp-company-info-label {
+    font-weight: 600;
+    color: var(--pratikwp-elementor-text);
+    margin-bottom: var(--pratikwp-elementor-spacing-sm);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pratikwp-company-info-value {
+    color: var(--pratikwp-elementor-secondary);
+    line-height: 1.5;
+}
+
+.pratikwp-company-info-value a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--pratikwp-elementor-transition-fast);
+}
+
+.pratikwp-company-info-value a:hover {
+    color: var(--pratikwp-elementor-primary);
+}
+
+/* Social Media Widget */
+.pratikwp-social-media {
+    display: flex;
+    gap: var(--pratikwp-elementor-spacing-sm);
+    align-items: center;
+}
+
+.pratikwp-social-media.layout-vertical {
+    flex-direction: column;
+}
+
+.pratikwp-social-media.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: var(--pratikwp-elementor-spacing-sm);
+}
+
+.pratikwp-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--pratikwp-elementor-secondary);
+    color: var(--pratikwp-elementor-white);
+    text-decoration: none;
+    border-radius: var(--pratikwp-elementor-border-radius);
+    transition: var(--pratikwp-elementor-transition);
+    font-size: 1.2rem;
+}
+
+.pratikwp-social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--pratikwp-elementor-shadow);
+}
+
+.pratikwp-social-link.facebook {
+    background: #1877f2;
+}
+
+.pratikwp-social-link.twitter {
+    background: #1da1f2;
+}
+
+.pratikwp-social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.pratikwp-social-link.linkedin {
+    background: #0077b5;
+}
+
+.pratikwp-social-link.youtube {
+    background: #ff0000;
+}
+
+.pratikwp-social-link.whatsapp {
+    background: #25d366;
+}
+
+.pratikwp-social-link.telegram {
+    background: #0088cc;
+}
+
+.pratikwp-social-link.pinterest {
+    background: #bd081c;
+}
+
+.pratikwp-social-link.tiktok {
+    background: #000000;
+}
+
+/* Social Media with Labels */
+.pratikwp-social-media.show-labels .pratikwp-social-link {
+    width: auto;
+    padding: var(--pratikwp-elementor-spacing-sm) var(--pratikwp-elementor-spacing);
+    border-radius: var(--pratikwp-elementor-border-radius-lg);
+    gap: var(--pratikwp-elementor-spacing-sm);
+}
+
+.pratikwp-social-media.show-labels .pratikwp-social-link span {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Custom Elementor Controls */
+.pratikwp-image-select {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--pratikwp-elementor-spacing-sm);
+    margin-bottom: var(--pratikwp-elementor-spacing);
+}
+
+.pratikwp-image-select-item {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid var(--pratikwp-elementor-border);
+    border-radius: var(--pratikwp-elementor-border-radius);
+    overflow: hidden;
+    transition: var(--pratikwp-elementor-transition);
+}
+
+.pratikwp-image-select-item:hover {
+    border-color: var(--pratikwp-elementor-primary);
+}
+
+.pratikwp-image-select-item.selected {
+    border-color: var(--pratikwp-elementor-primary);
+    box-shadow: 0 0 10px rgba(0, 124, 186, 0.3);
+}
+
+.pratikwp-image-select-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pratikwp-image-select-item .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--pratikwp-elementor-white);
+    padding: var(--pratikwp-elementor-spacing-sm);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Theme Locations Extensions */
+.elementor-theme-builder-content-area {
+    min-height: 400px;
+}
+
+.elementor-theme-builder-content-area .elementor-section-wrap:empty::before {
+    content: "Drop widgets here to build your template";
+    display: block;
+    text-align: center;
+    padding: var(--pratikwp-elementor-spacing-xxl);
+    color: var(--pratikwp-elementor-secondary);
+    font-style: italic;
+    border: 2px dashed var(--pratikwp-elementor-border);
+    border-radius: var(--pratikwp-elementor-border-radius);
+    margin: var(--pratikwp-elementor-spacing);
+}
+
+/* Custom CSS Extension */
+.pratikwp-custom-css-output {
+    /* This class can be targeted by the custom CSS extension */
+}
+
+/* Elementor Pro compatibility */
+.elementor-kit-4 {
+    /* Default kit styles can be overridden here */
+}
+
+/* Header specific styles */
+.elementor-location-header .elementor-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elementor-location-header .elementor-widget-pratikwp-nav-menu {
+    margin-left: auto;
+}
+
+/* Footer specific styles */
+.elementor-location-footer {
+    background: var(--pratikwp-elementor-dark);
+    color: var(--pratikwp-elementor-white);
+    padding: var(--pratikwp-elementor-spacing-xl) 0;
+}
+
+.elementor-location-footer a {
+    color: var(--pratikwp-elementor-white);
+}
+
+.elementor-location-footer a:hover {
+    color: var(--pratikwp-elementor-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pratikwp-company-info.layout-horizontal {
+        flex-direction: column;
+    }
+    
+    .pratikwp-company-info.layout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pratikwp-social-media.layout-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .pratikwp-post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--pratikwp-elementor-spacing-sm);
+    }
+    
+    .pratikwp-breadcrumbs ol {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .pratikwp-breadcrumbs .separator {
+        display: none;
+    }
+}
+
+/* Animation classes for Elementor */
+.pratikwp-fade-in {
+    animation: pratikwpFadeIn 0.6s ease-out;
+}
+
+.pratikwp-slide-up {
+    animation: pratikwpSlideUp 0.6s ease-out;
+}
+
+.pratikwp-slide-down {
+    animation: pratikwpSlideDown 0.6s ease-out;
+}
+
+.pratikwp-slide-left {
+    animation: pratikwpSlideLeft 0.6s ease-out;
+}
+
+.pratikwp-slide-right {
+    animation: pratikwpSlideRight 0.6s ease-out;
+}
+
+.pratikwp-zoom-in {
+    animation: pratikwpZoomIn 0.6s ease-out;
+}
+
+@keyframes pratikwpFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pratikwpSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pratikwpSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pratikwpSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pratikwpSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pratikwpZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Print styles */
+@media print {
+    .pratikwp-nav-menu,
+    .pratikwp-social-media,
+    .elementor-location-header,
+    .elementor-location-footer {
+        display: none !important;
+    }
+    
+    .pratikwp-company-info,
+    .pratikwp-post-meta,
+    .pratikwp-breadcrumbs {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
